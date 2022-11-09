@@ -1,8 +1,15 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
+string dataString = "2022-04-17 18:00";
 
-DateTime data = DateTime.Parse("17/04/2022 18:00");
+DateTime.TryParseExact(dataString, 
+                        "yyyy-MM-dd HH:mm", 
+                        CultureInfo.InvariantCulture, 
+                        DateTimeStyles.None, out DateTime data);
+
+
+//DateTime data = DateTime.Parse("17/04/2022 18:00");
 Console.WriteLine(data);
 
 // Console.WriteLine(data.ToShortDateString());
