@@ -1,17 +1,31 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-string dataString = "2022-04-17 18:00";
+string dataString = "2022-04-170 18:00";
 
-DateTime.TryParseExact(dataString, 
+bool sucesso = DateTime.TryParseExact(dataString, 
                         "yyyy-MM-dd HH:mm", 
                         CultureInfo.InvariantCulture, 
                         DateTimeStyles.None, out DateTime data);
 
+if(sucesso)
+{
+    Console.WriteLine($"Conversão com sucesso! Data: {data}");
+}
+else
+{
+    Console.WriteLine($"{dataString} não é uma data válida.");
+}
+
+
+
+
+
+
+
+
 
 //DateTime data = DateTime.Parse("17/04/2022 18:00");
-Console.WriteLine(data);
-
 // Console.WriteLine(data.ToShortDateString());
 // Console.WriteLine(data.ToShortTimeString());
 
