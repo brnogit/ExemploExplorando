@@ -1,12 +1,44 @@
 ﻿using ExemploExplorando.Models;
 
+decimal valorMonetario = 1582.40M;
 
-string numero1 = "10";
-string numero2 = "20";
+Console.WriteLine($"{valorMonetario:C}");
 
-string resultado = numero1 + numero2;
 
-Console.WriteLine(resultado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// string numero1 = "10";
+// string numero2 = "20";
+
+// string resultado = numero1 + numero2;
+
+// Console.WriteLine(resultado);
 
 
 
