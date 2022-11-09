@@ -2,8 +2,11 @@
 using System.Globalization;
 
 
-DateTime data = DateTime.Now;
-Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm"));
+DateTime data = DateTime.Parse("17/04/2022 18:00");
+Console.WriteLine(data);
+
+// Console.WriteLine(data.ToShortDateString());
+// Console.WriteLine(data.ToShortTimeString());
 
 
 
