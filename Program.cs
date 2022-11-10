@@ -1,18 +1,94 @@
 ﻿using ExemploExplorando.Models;
 using System.Globalization;
 
-Dictionary<string, string> estados = new Dictionary<string, string>();
+LeituraArquivo arquivo = new LeituraArquivo();
 
-estados.Add("SP", "São Paulo");
-estados.Add("BA", "Bahia");
-estados.Add("MG", "Minas Gerais");
+var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Arquivo/arquivoLeitura.txt");
 
-foreach(var item in estados)
+if (sucesso)
 {
-    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+    Console.WriteLine("Quantidade linhas do arquivo:" + quantidadeLinhas);
+    foreach(string linha in linhasArquivo)
+    {
+        Console.WriteLine(linha);
+    }
+}
+else
+{
+    Console.WriteLine("Não foi possivel ler o arquivo");
 }
 
 
+
+
+
+
+
+
+// (int Id, string Nome, string Sobrenome, decimal Altura) tupla = (1, "Bruno", "Mota", 1.80M);
+// // ValueTuple<int, string, string, decimal> outroExemploTupla = (1, "Bruno", "Mota", 1.80M);
+// // var outroExemploTuplaCreate = Tuple.Create(1, "Bruno", "Mota", 1.80M);
+
+// Console.WriteLine($"Id: {tupla.Id}");
+// Console.WriteLine($"Nome: {tupla.Nome}");
+// Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
+// Console.WriteLine($"Altura: {tupla.Altura}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Dictionary<string, string> estados = new Dictionary<string, string>();
+
+// estados.Add("SP", "São Paulo");
+// estados.Add("BA", "Bahia");
+// estados.Add("MG", "Minas Gerais");
+
+
+
+// Console.WriteLine(estados["MG"]);
+
+
+
+
+
+
+
+// foreach(var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+// Console.WriteLine("---------");
+// estados.Remove("BA");
+// estados["SP"] = "São Paulo - valor alterado";
+
+// foreach(var item in estados)
+// {
+//     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+// string chave = "BA";
+// Console.WriteLine($"Verificando o elemento: {chave}");
+
+// if(estados.ContainsKey(chave))
+// {
+//     Console.WriteLine($"Valor existente: {chave}");
+// }
+// else
+// {
+//     Console.WriteLine($"Valor não existe. É seguro adicionar a chave: {chave}");
+// }
 
 
 
